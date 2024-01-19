@@ -2,21 +2,18 @@ export function About() {
   return (
     <div className="py-16 px-4 flex flex-col gap-6 bg-gray-50">
       <div className="flex justify-center">
-        <p>About</p>
+        <p className="px-5 py-1 bg-gray-200 rounded-xl text-gray-600">About</p>
       </div>
-      <div className="flex flex-col gap-12 md:flex-row">
-        <div
-          className="flex justify-center items-start relative  h-[380px] min-w-[444px] flex-[1_0_0]
-"
-        >
+      <div className="flex flex-col gap-12 justify-start  md:flex-row ">
+        <div className="flex justify-center items-start relative  h-[380px]  md:flex-[1_0_0] ">
           <img
-            className="border-8 border-white w-[280px] h-[360px] z-[2]"
+            className="border-8 border-white max-w-[280px] h-[360px] z-[2]"
             src="https://s3-alpha-sig.figma.com/img/8781/bda6/7a25952db5724f48492cd455a6e81952?Expires=1706486400&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=iD776LocC9a2IKsEEOaYst01NN5Lo3uvEsPe-g-xHHCoZ3YH2nTx6vngudPrjvMx9V8fPVT4IK3s3nj1Myeef6xBPc9vfd3E4iP1c2fe7QC-nBR2k~YbfdlJNFiyDEEFAXF6TtkbM5EehR2t8RehwXWG5DL-QW2AgEX4WhHCUHTCwg8YVAk0fK5PiQ2zyyV9zL0bfPyOdcr7ihc1WFlz7Tdf-PKy6ukX3mjD0Vo2wuGgontjFSSetothS6hfcwSOXmbzezxEO4NmD29qL1pCYvp2iVoFU~lu0h6JaoLlT3hc0LVsjWRZdSiwGHT0XXpjzdYHAbrDM70dMS1aH~n-hw__"
             alt=""
           />
-          <div className="absolute	w-[320px] h-[360px] bg-blue-700 z-[1] bottom-0 border-8 border-blue-600"></div>
+          <div className="absolute	w-[320px] h-[360px] bg-gray-200 z-[1] bottom-0 border-8 border-gray-50"></div>
         </div>
-        <div className="flex flex-col gap-6 min-w-[444px] flex-[1_0_0]">
+        <div className="flex flex-col h-auto gap-6  md:flex-[1_0_0] ">
           <div className="text-2xl font-semibold leading-8 text-gray-900	">
             <p>Curious about me? Here you have it:</p>
           </div>

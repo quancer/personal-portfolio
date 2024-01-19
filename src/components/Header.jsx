@@ -1,8 +1,8 @@
 export function Header() {
   return (
-    <div className="px-4 lg:px-20 py-4">
+    <div className=" px-4 md:px-20 py-4">
       <div className="flex justify-between  items-center	">
-        <a href="#" className="text-3xl	font-bold	">
+        <a href="#" className="text-3xl	font-bold text-gray-900">
           {"<SS />"}
         </a>
         <div className="p-1.5 md:hidden">
