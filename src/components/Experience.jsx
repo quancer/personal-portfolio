@@ -34,7 +34,7 @@ export function Experience() {
   ];
 
   return (
-    <div className="flex flex-col px-4 gap-12 items-center bg-gray-50 py-16 md:mx-20 md:my-24">
+    <div className="flex flex-col px-4 gap-12 items-center bg-gray-50 py-16 md:px-20 md:py-24">
       <div className="flex flex-col md:mx-8 ">
         <div className="flex flex-col gap-4">
           <div className="flex justify-center items-center">
@@ -49,17 +49,17 @@ export function Experience() {
       </div>
       {exp.map((e) => {
         return (
-          <div className="flex justify-between max-w-[832px] p-8 gap-12">
+          <div className="flex gap-4 flex-col p-8 md:flex-row md:justify-between md:max-w-[832px] md:p-8 md:gap-12">
             <div>{e.logo}</div>
-            <div className="flex flex-col gap-4">
+            <div className="md:order-1">{e.date}</div>
+            <div className="flex flex-col gap-4 md:max-w-[384px]">
               <p className="text-xl font-semibold	">{e.infoHead}</p>
-              <ul>
+              <ul className="flex flex-col gap-1 items-start list-disc">
                 {e.infoList.map((item) => {
-                  return <li>{item}</li>;
+                  return <li className="ml-4">{item}</li>;
                 })}
               </ul>
             </div>
-            <div>{e.date}</div>
           </div>
         );
       })}

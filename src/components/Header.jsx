@@ -1,10 +1,12 @@
+import Link from "next/link";
+
 export function Header() {
   return (
     <div className=" px-4 md:px-20 py-4">
       <div className="flex justify-between  items-center	">
-        <a href="#" className="text-3xl	font-bold text-gray-900">
+        <Link className="text-3xl	font-bold text-gray-900" href="/">
           {"<SS />"}
-        </a>
+        </Link>
         <div className="p-1.5 md:hidden">
           <svg
             xmlns="http://www.w3.org/2000/svg"
@@ -38,10 +40,10 @@ export function Header() {
         </div>
         <ul className="hidden text-base	 md:flex gap-8 text-gray-600 items-center	">
           <li>
-            <a href="#">About</a>
+            <Link href="/Playscore">PlayScore</Link>
           </li>
           <li>
-            <a href="#">Work</a>
+            <a href="#">About</a>
           </li>
           <li>
             <a href="#">Testimonials</a>

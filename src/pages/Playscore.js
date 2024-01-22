@@ -8,18 +8,12 @@ import {
   Contact,
   Footer,
 } from "@/components";
-
-export default function Home() {
+import Ps from "@/components/playscore/Ps";
+export default function Playscore() {
   return (
     <div className="text-gray-600 max-w-[1280px] m-auto">
       <Header />
-
-      <Hero />
-      <About />
-      <Skills />
-      <Experience />
-      <Work />
-      <Contact />
+      <Ps />
       <Footer />
     </div>
   );

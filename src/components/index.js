@@ -3,4 +3,7 @@ export * from "./Header";
 export * from "./Hero";
 export * from "./Skills";
 export * from "./Experience";
+export * from "./Work";
+export * from "./Contact";
+export * from "./Footer";
 export * from "./svg/icon";
