@@ -6,4 +6,5 @@ export * from "./Experience";
 export * from "./Work";
 export * from "./Contact";
 export * from "./Footer";
+export * from "./Menu";
 export * from "./svg/icon";

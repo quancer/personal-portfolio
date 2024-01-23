@@ -1,134 +1,38 @@
 import Link from "next/link";
+import { Menu } from "@/components";
+import { IconMenu } from "./svg/icon";
+import { useTheme } from "@/context/ThemeContext";
+import { MobileMenu } from "./MobileMenu";
 
 export function Header() {
+  const { theme, setTheme, iconMenu, setIconMenu } = useTheme();
+  const changeThemeHandler = () => {
+    setTheme(theme == "Light" ? "Dark" : "Light");
+  };
+  function buttonHandler() {
+    setIconMenu(!iconMenu);
+    console.log(iconMenu);
+  }
+  let divClassName = `px-4 md:px-20 py-4 text-gray-600 ${
+    theme == "Light" ? "bg-[#fff] " : "bg-[#030712]"
+  }`;
+  let divLogo = `text-3xl	font-bold ${
+    theme == "Light" ? "text-gray-900 " : "text-[#fff]"
+  } `;
   return (
-    <div className=" px-4 md:px-20 py-4">
-      <div className="flex justify-between  items-center	">
-        <Link className="text-3xl	font-bold text-gray-900" href="/">
-          {"<SS />"}
-        </Link>
-        <div className="p-1.5 md:hidden">
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            width="24"
-            height="24"
-            viewBox="0 0 24 24"
-            fill="none"
-          >
-            <path
-              d="M4 12H20"
-              stroke="#4B5563"
-              stroke-width="2"
-              stroke-linecap="round"
-              stroke-linejoin="round"
-            />
-            <path
-              d="M4 6H20"
-              stroke="#4B5563"
-              stroke-width="2"
-              stroke-linecap="round"
-              stroke-linejoin="round"
-            />
-            <path
-              d="M4 18H20"
-              stroke="#4B5563"
-              stroke-width="2"
-              stroke-linecap="round"
-              stroke-linejoin="round"
-            />
-          </svg>
+    <div className="max-w-[1280px]  m-auto">
+      <div className={divClassName}>
+        <div className="flex justify-between  items-center	relative">
+          <Link className={divLogo} href="/">
+            {"<SS />"}
+          </Link>
+          <button onClick={buttonHandler} className="p-1.5 md:hidden relative">
+            {iconMenu ? <MobileMenu /> : <IconMenu />}
+          </button>
+          <div className="hidden md:flex">
+            <Menu />
+          </div>
         </div>
-        <ul className="hidden text-base	 md:flex gap-8 text-gray-600 items-center	">
-          <li>
-            <Link href="/Playscore">PlayScore</Link>
-          </li>
-          <li>
-            <a href="#">About</a>
-          </li>
-          <li>
-            <a href="#">Testimonials</a>
-          </li>
-          <li>
-            <a href="#">Contact</a>
-          </li>
-          <li>|</li>
-          <li className="flex gap-4">
-            <button>
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                width="24"
-                height="24"
-                viewBox="0 0 24 24"
-                fill="none"
-              >
-                <path
-                  d="M12 16C14.2091 16 16 14.2091 16 12C16 9.79086 14.2091 8 12 8C9.79086 8 8 9.79086 8 12C8 14.2091 9.79086 16 12 16Z"
-                  stroke="#4B5563"
-                  stroke-width="2"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                />
-                <path
-                  d="M12 2V4"
-                  stroke="#4B5563"
-                  stroke-width="2"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                />
-                <path
-                  d="M12 20V22"
-                  stroke="#4B5563"
-                  stroke-width="2"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                />
-                <path
-                  d="M4.92993 4.92999L6.33993 6.33999"
-                  stroke="#4B5563"
-                  stroke-width="2"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                />
-                <path
-                  d="M17.6599 17.66L19.0699 19.07"
-                  stroke="#4B5563"
-                  stroke-width="2"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                />
-                <path
-                  d="M2 12H4"
-                  stroke="#4B5563"
-                  stroke-width="2"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                />
-                <path
-                  d="M20 12H22"
-                  stroke="#4B5563"
-                  stroke-width="2"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                />
-                <path
-                  d="M6.33993 17.66L4.92993 19.07"
-                  stroke="#4B5563"
-                  stroke-width="2"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                />
-                <path
-                  d="M19.0699 4.92999L17.6599 6.33999"
-                  stroke="#4B5563"
-                  stroke-width="2"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                />
-              </svg>
-            </button>
-            <button>Download CV</button>
-          </li>
-        </ul>
       </div>
     </div>
   );

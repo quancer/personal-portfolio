@@ -15,3 +15,7 @@ export * from "./StorybookIcon";
 export * from "./TailwindIcon";
 export * from "./TypescriptIcon";
 export * from "./Upcome";
+export * from "./Light";
+export * from "./Dark";
+export * from "./IconMenu";
+export * from "./Exit";

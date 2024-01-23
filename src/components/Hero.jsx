@@ -1,9 +1,9 @@
 export function Hero() {
   return (
     <div className="flex flex-col items-center py-16 px-4 gap-12 md:px-20 md:flex-row md:py-24 md:justify-center md:items-start">
-      <div className="relative max-w-[343px] max-h-[300px] flex justify-center md:max-w-[400px] md:h-360px items-center md:order-2">
+      <div className=" max-w-[343px] max-h-[300px] flex justify-center md:max-w-[400px] md:h-360px items-center md:order-2">
         <img
-          className="max-w-[240px]	max-h-[280px]  border-8 shadow-[15px_15px_#E5E7EB,_-15px_15px_#E5E7EB] border-white	md:max-w-[280px] md:max-h-[320px] md:shadow-[40px_40px_#E5E7EB]"
+          className="z-1 max-w-[240px]	max-h-[280px]  border-8 shadow-[15px_15px_#E5E7EB,_-15px_15px_#E5E7EB] border-white	md:max-w-[280px] md:max-h-[320px] md:shadow-[40px_40px_#E5E7EB]"
           src="https://s3-alpha-sig.figma.com/img/f85c/f455/11cd2ba02a83d564218d6500a134a91d?Expires=1706486400&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=J6ilx-NOb63~KzVYyZfxx4qzRN~gm9QHjip~sIpK9MTVSZsX~huwLpZqpJyqW7GDTT8lB8QtBCj5-2PtU-Ygp48aaoTUuruT2gkBXQL~lHchh7pKMdkHIJrb2oMYnvdAYQNxOMjjUIF8HDscGx5Nt7iw4F0WHx0HmiLM~STQEdaUIw0hp1E28oW5KSCJTY9dpgSECxgzNyTUNroqNwgsE5X4gYOS6SIFW~iIc98LskU-vU9DVPo3dEzu2N-2Fz4UiQZedr6UAGezp4AEFbGvN6RWj7EetJyu7prBfAxtS4Q0dAi36VtSyse6uAVnFGuXHQ9Y83-~6UcTO1YSVEzzGQ__"
           alt=""
         />
